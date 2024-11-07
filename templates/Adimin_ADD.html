@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        /* Global styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 80px;
+            
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form container */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        /* Input labels and fields */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Book list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Delete button for books */
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #f44336;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        a:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('Admin_home') }}">Bookscape</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('Admin_home') }}">Home</a>
+                    <a class="nav-link" href="{{ url_for('view_books') }}">Add Books</a>
+                    <a class="nav-link" href="{{ url_for('add_member') }}">Manage Members</a>
+                    <a class="nav-link" href="{{ url_for('resp')}}">Reports</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add Book Form -->
+    <h1>Add a Book</h1>
+    <form action="/add_Admin" method="POST">
+        <label for="book_name">Book Name:</label>
+        <input type="text" id="book_name" name="book_name" required><br>
+        <label for="author_name">Author:</label>
+        <input type="text" id="author_name" name="author_name" required><br>
+        <label for="book_price">Price:</label>
+        <input type="text" id="book_price" name="book_price" required><br>
+        <label for="d">Description:</label>
+        <input type="text" id="d" name="d" required><br>
+        <button type="submit">Add</button>
+    </form>
+
+    <!-- Book List -->
+    <h1>Book List</h1>
+    <ul>
+        <!-- Loop over the books list and display each book with a delete button -->
+        {% for book in books %}
+        <li>
+            {{ book.name }} 
+            <a href="{{ url_for('Delete_BOOK', book_id=book.id) }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

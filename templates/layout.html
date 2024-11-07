@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookscape - Library Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        /* .hero {
+            padding: 80px 0;
+            background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794'); /* Replace with your image */
+            /* background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+        } */ */
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Custom styles for book cards */
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex-grow: 1;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        /* .container {
+            margin-top: -50px;
+            background-color: rgba(148, 192, 196, 0.311);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        } */
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('home')}}">Bookscape</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('home1')}}">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('added')}}">Add Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('Top_book')}}">Top Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('register')}}">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+  
+    {% block content  %}
+
+
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
