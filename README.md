@@ -23,11 +23,11 @@ link- https://flask-bookscap.onrender.com/
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Python, Flask / Django
-- **Frontend:** HTML, CSS, Bootstrap / Tailwind CSS
-- **Database:** PostgreSQL / MySQL / SQLite
-- **Authentication:** JWT / Flask-Login / Django Auth
-- **Deployment:** Render / Heroku / AWS
+- **Backend:** Python, Flask
+- **Frontend:** HTML, CSS, Bootstrap 
+- **Database:** SQLite
+- **Authentication:**  Flask-Login 
+- **Deployment:** Render 
 
 ## 📂 Project Structure
 
