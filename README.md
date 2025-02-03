@@ -71,15 +71,11 @@ Go to **`http://localhost:5000/`** to explore the bookstore.
 
 - ✅ Implement **payment gateway** for secure transactions.
 - ✅ Add **book reviews and ratings**.
-- ✅ Deploy on **AWS / Render / Heroku** for public access.
+- ✅ Deploy on  Render 
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to submit issues or pull requests.
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
+Contributions are welcome! Feel free to submit issues or pull requests
 
 ---
 
