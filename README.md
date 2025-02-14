@@ -47,7 +47,7 @@ link- https://flask-bookscap.onrender.com/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/online-bookstore.git
+git clone https://github.com/deepraj16/online-bookstore.git
 cd online-bookstore
 ```
 
