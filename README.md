@@ -75,7 +75,6 @@ Go to **`http://localhost:5000/`** to explore the bookstore.
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests
-
 ---
 
 ### 🔗 Connect with Me
