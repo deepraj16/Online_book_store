@@ -9,7 +9,6 @@ The **Online Book Store** is a web-based platform that allows users to browse, s
 link- https://flask-bookscap.onrender.com/
 
 ![image](https://github.com/user-attachments/assets/ef279855-f7db-464f-acb9-5d7e45a559bf)
-
 ---
 
 ## 🚀 Features
